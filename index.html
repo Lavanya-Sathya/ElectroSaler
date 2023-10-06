@@ -36,7 +36,7 @@
                         <a class="nav-link" href="#">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Service</a>
+                        <a class="nav-link" href="#review">Review</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -54,8 +54,9 @@
                 <img src="images/home.jpg" alt="Los Angeles" class="d-block background">
                 <div class="carousel-caption " id="textCarousel1">
                     <!-- <p class="h1">ElectroSaler</p> -->
-                    <p class="p-4">We provide various products and also help you to find the best product that suits your requirement.</p>
-                  </div>
+                    <p class="p-4">We provide various products and also help you to find the best product that suits
+                        your requirement.</p>
+                </div>
             </div>
             <div class="carousel-item">
                 <img src="images/home2.jpg" alt="Chicago" class="d-block background">
@@ -63,9 +64,9 @@
             <div class="carousel-item">
                 <img src="images/home3.jpg" alt="New York" class="d-block background">
                 <div class="carousel-caption " id="textCarousel3">
-                    <p>Feel free to explore the feature section <br/> that 
+                    <p>Feel free to explore the feature section <br /> that
                         helps you to decide on how to <br />choose the product.</p>
-                  </div>
+                </div>
             </div>
         </div>
 
@@ -107,7 +108,7 @@
                 </p>
             </div>
             <div class="col-lg-7">
-                <img src="images/feature/performance.jpg" alt="feature_performance" style="width:100%; height:auto">
+                <img src="images/feature/performance.jpg" class="feature_animation" alt="feature_performance">
             </div>
         </div>
         <!-- Display -->
@@ -122,7 +123,7 @@
                 </p>
             </div>
             <div class="col-lg-7 order-lg-1 ">
-                <img src="images/feature/display.jpg" alt="display" style="width:100%; height:auto">
+                <img src="images/feature/display.jpg" class="feature_animation"  alt="display">
             </div>
         </div>
         <!-- Battery Life -->
@@ -135,7 +136,7 @@
                 </p>
             </div>
             <div class="col-lg-7">
-                <img src="images/feature/battery.jpg" alt="battery" style="width:100%; height:auto">
+                <img src="images/feature/battery.jpg" alt="battery" class="feature_animation">
             </div>
         </div>
         <!-- Operating System -->
@@ -148,7 +149,7 @@
                 </p>
             </div>
             <div class="col-lg-7 order-lg-1 ">
-                <img src="images/feature/operating_system.jpg" alt="operating_system" style="width:100%; height:auto">
+                <img src="images/feature/operating_system.jpg" alt="operating_system" class="feature_animation">
             </div>
         </div>
         <!-- Build Quality -->
@@ -161,7 +162,7 @@
                 </p>
             </div>
             <div class="col-lg-7">
-                <img src="images/feature/build_quality.jpg" alt="Build_Quality" style="width:100%; height:auto">
+                <img src="images/feature/build_quality.jpg" alt="Build_Quality" class="feature_animation">
             </div>
         </div>
         <!-- Storage and Expandability -->
@@ -174,7 +175,7 @@
                 </p>
             </div>
             <div class="col-lg-7 order-lg-1 ">
-                <img src="images/feature/storage.jpg" alt="Storage_and_Expandability" style="width:100%; height:auto">
+                <img src="images/feature/storage.jpg" alt="Storage_and_Expandability" class="feature_animation">
             </div>
         </div>
         <!-- Connectivity -->
@@ -187,7 +188,7 @@
                 </p>
             </div>
             <div class="col-lg-7">
-                <img src="images/feature/connectivity.jpg" alt="Connectivity" style="width:100%; height:auto">
+                <img src="images/feature/connectivity.jpg" alt="Connectivity" class="feature_animation" >
             </div>
         </div>
         <!-- Cameras -->
@@ -199,7 +200,7 @@
                 </p>
             </div>
             <div class="col-lg-7 order-lg-1 ">
-                <img src="images/feature/camera.jpg" alt="Cameras" style="width:100%; height:auto">
+                <img src="images/feature/camera.jpg" alt="Cameras" class="feature_animation" >
             </div>
         </div>
         <!-- Security -->
@@ -212,7 +213,7 @@
                 </p>
             </div>
             <div class="col-lg-7">
-                <img src="images/feature/security.jpg" alt="Security" style="width:100%; height:auto">
+                <img src="images/feature/security.jpg" alt="Security" class="feature_animation">
             </div>
         </div>
         <!-- Price and Budget -->
@@ -224,37 +225,53 @@
                 </p>
             </div>
             <div class="col-lg-7 order-lg-1 ">
-                <img src="images/feature/price.jpg" alt="Price and Budget" style="width:100%; height:auto">
+                <img src="images/feature/price.jpg" alt="Price and Budget" class="feature_animation">
             </div>
         </div>
     </div>
 
+    <!-- Review Section -->
+    <!-- <div class="container mt-5">
+        <h1 class="text-center" id="review">Reviews</h1>
+        <div class="row">
+            <div class="col-lg-12 reviewCol">
+                <p class="text-left"></p>
+            </div>
+        </div>
+    </div> -->
+
     <!-- Contact section -->
     <div class="my-5">
         <h1 class="text-center" id="contact">Contact Us</h1>
+        <div class="container">
+            <div class="col-lg-12">
+                <p class="text-center">You are welcome to ask questions and offer feedback in this section.</p> 
+                <p class="text-center"> That will also assist us in enhancing and improving the user experience, product, and service.</p>  
+            </div>
+        </div>
         <form action="#" method="post" id="contactForm">
-            <div class="mb-3 mt-3" >
+            <div class="mb-3 mt-3">
                 <label for="name" class="form-label">Name:</label>
                 <input type="name" class="form-control" id="name" placeholder="Enter name" name="name" required>
-              </div>
+            </div>
             <div class="mb-3 ">
-              <label for="email" class="form-label">Email:</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
             </div>
             <div class="mb-3">
                 <label for="comment">Query:</label>
                 <textarea class="form-control" rows="5" id="comment" name="text" required></textarea>
             </div>
-            
+
             <button type="submit" id="formBtn">Submit</button>
-          </form>
+        </form>
     </div>
-    
+
     <!-- footer section -->
-    <footer  class="mt-5">
+    <footer class="mt-5">
         <div class="container-fluid" id="footerMain">
             <div class="container p-5">
-                <div class="row" id="footerRow"  >
+                <div class="row" id="footerRow">
                     <div class="col-lg-2 p-4 footerCol">
                         <p class="h4 text-white footerHeader">MENU</p>
                         <ul>
@@ -262,8 +279,8 @@
                             <li><a href="#about">About</a></li>
                             <li><a href="#features">Feature</a></li>
                             <li><a href="#">Product</a></li>
-                            <li><a href="#">Service</a></li>
-                            <li><a href="contact">Contact</a></li>
+                            <li><a href="#review">Review</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-4 p-4 footerCol ">
@@ -278,16 +295,20 @@
                     <div class="col-lg-6 p-3 footerCol ">
                         <p class="h4 text-white footerHeader">Contact</p>
                         <ul>
-                            <li><i class="fa-regular fa-envelope" style="color: #afb1b6;"></i></i><a href="mailto:sathyalavanya5@gmail.com">  sathyalavanya5@gmail.com</a></li>
-                            <li><i class="fa-brands fa-github" style="color: #ecedef;"></i><a href="https://github.com/Lavanya-Sathya" target="_blank">  GitHub</a></li>
-                            <li><i class="fa-brands fa-linkedin" style="color: #ecedef;"></i><a href="https://www.linkedin.com/in/lavanya-s-a588a9195/" target="_blank">  LinkedIn</a></li>
+                            <li><i class="fa-regular fa-envelope" style="color: #afb1b6;"></i></i><a
+                                    href="mailto:sathyalavanya5@gmail.com"> sathyalavanya5@gmail.com</a></li>
+                            <li><i class="fa-brands fa-github" style="color: #ecedef;"></i><a
+                                    href="https://github.com/Lavanya-Sathya" target="_blank"> GitHub</a></li>
+                            <li><i class="fa-brands fa-linkedin" style="color: #ecedef;"></i><a
+                                    href="https://www.linkedin.com/in/lavanya-s-a588a9195/" target="_blank">
+                                    LinkedIn</a></li>
                         </ul>
-                        
+
                     </div>
                 </div>
             </div>
-        
-        <p class="text-center p-4 m-0 text-light h6 border-top">&copy; 2021 ElectroSaler. All Rights Reserved</p>
+
+            <p class="text-center p-4 m-0 text-light h6 border-top">&copy; 2023 ElectroSaler. All Rights Reserved</p>
         </div>
     </footer>
 
