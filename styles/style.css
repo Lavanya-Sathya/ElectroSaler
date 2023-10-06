@@ -51,7 +51,8 @@ body{
     padding: 2rem;
 }
 .feature_animation {
-    width:95%; 
+    width:98%; 
+    max-width:100%;
     margin:auto;
     opacity: 0.8;
     height:auto;
@@ -110,6 +111,9 @@ body{
     #textCarousel3{
         font-size: 0.7rem;
     }
+    .featureHeading{
+        padding: 0.8rem;
+    }
     #contactForm{
         width:80%;
     }
@@ -127,6 +131,9 @@ body{
     }
     #textCarousel1{
         font-size: 1.5rem;
+    }
+    .featureHeading{
+        padding: 0.8rem;
     }
     #textCarousel3{
         font-size: 1.5rem;
