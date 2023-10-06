@@ -63,7 +63,17 @@ body{
     width:100%;
 }
 /* review section  */
-
+.star{
+    color: rgb(17, 44, 68);
+}
+.no_star{
+    color: rgb(205, 212, 218);
+}
+.review{
+    background-image: linear-gradient(50deg, rgb(218, 158, 193), rgb(133, 38, 126));
+    padding:1em;
+    border-radius: 0.5em;
+}
 /* contact section  */
 #contactForm{
     width:50%;
