@@ -13,11 +13,13 @@ body{
     color:rgb(15, 16, 59);
     font-size: 800;
 }
-.nav-link:hover{
+.nav-link:hover, .dropdown-item:hover{
     padding-left:1em;
+    border-bottom: 2px solid rgb(65, 3, 39);
     color: rgb(15, 16, 59);
-    background-image: linear-gradient(50deg, rgb(218, 158, 193), rgb(87, 21, 83));
-    border-radius: 0.6em;
+    /* background-image: linear-gradient(50deg, rgb(218, 158, 193), rgb(87, 21, 83)); */
+    border-radius: 0.2em;
+    background-color: white;
 }
 
 .background{
@@ -39,7 +41,8 @@ body{
     font-size: 2rem;
     
 }
-#about, #features, #contact, #review{
+#about, #features, #contact, #review, #product,
+#smartPhone, #laptop, #accessories{
     color:rgb(15, 16, 59);
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -61,6 +64,35 @@ body{
 }
 .feature_animation:hover{
     width:100%;
+}
+/* Product Section */
+.prod_img{
+    height:auto;
+    min-height:100%;
+    max-width:100%;
+}
+.prod_card img{
+    height:25rem;
+}
+.prod_card{
+    height:43rem;
+}
+.prod_btn{
+    text-decoration: none;
+    color:rgb(252, 252, 252);
+    background-image: linear-gradient(50deg, rgb(109, 88, 136), rgb(133, 38, 126));
+    border: 2px solid rgb(133, 38, 126);
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+}
+.prod_btn{
+    background-image: linear-gradient(50deg, rgb(218, 158, 193), rgb(133, 38, 126));
+}
+.prod_lap img{
+    height:15rem;
+}
+.prod_lap{
+    height:33rem;
 }
 /* review section  */
 .star{
@@ -124,6 +156,24 @@ body{
     .featureHeading{
         padding: 0.8rem;
     }
+    .prod_card img{
+        height:18rem;
+    }
+    .prod_card{
+        height:38rem;
+        width:70%;
+        margin: auto;
+        margin-top: 1rem;
+    }
+    .prod_lap img{
+        height:13rem;
+    }
+    .prod_lap{
+        height:34rem;
+        width:80%;
+        margin: auto;
+        margin-top: 1rem;
+    }
     #contactForm{
         width:80%;
     }
@@ -132,6 +182,11 @@ body{
     }
     .footerCol ul {
         width: 100%;
+     }
+}
+@media only screen and (min-width:750px) and (max-width:1200px){
+    .feature_animation {
+        height:25rem;
      }
 }
 @media only screen and (min-width:780px) and (max-width:1200px){
@@ -147,6 +202,18 @@ body{
     }
     #textCarousel3{
         font-size: 1.5rem;
+    }
+    .prod_card img{
+        height:18rem;
+    }
+    .prod_card{
+        height:38rem;
+    }
+    .prod_lap img{
+        height:11rem;
+    }
+    .prod_lap{
+        height:35rem;
     }
     .footerHeader{
         text-align: left;
