@@ -51,20 +51,15 @@ body{
     background-image: linear-gradient(50deg,rgba(33, 4, 34,0.8),rgba(56, 7, 102, 0.9),rgb(53, 8, 31));
 }
 .featureHeading{
-    padding: 2rem;
+    padding: 2rem 1rem 2rem;
 }
-.feature_animation {
-    width:98%; 
-    max-width:100%;
-    margin:auto;
+.feature_img {
+    width:100%;
     opacity: 0.8;
-    height:auto;
-    transition: width 2s ;
+    height:20rem;
     border-radius: 5px;
 }
-.feature_animation:hover{
-    width:100%;
-}
+
 /* Product Section */
 .prod_img{
     height:auto;
@@ -154,7 +149,9 @@ body{
         font-size: 0.7rem;
     }
     .featureHeading{
-        padding: 0.8rem;
+        padding: 0.4rem;
+        margin-bottom: 0;
+        margin-left:0.4rem;
     }
     .prod_card img{
         height:18rem;
@@ -184,11 +181,7 @@ body{
         width: 100%;
      }
 }
-@media only screen and (min-width:750px) and (max-width:1200px){
-    .feature_animation {
-        height:25rem;
-     }
-}
+
 @media only screen and (min-width:780px) and (max-width:1200px){
     #icon{
         margin-right: 15em;
