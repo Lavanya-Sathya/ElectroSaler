@@ -4,14 +4,13 @@ body{
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    font-size: 1.2em;
-
+    font-size: 1rem;
 }
 /* home section  */
 #icon{
     margin-right: 24em;
     color:rgb(15, 16, 59);
-    font-size: 800;
+    font-size: 1.5rem;
 }
 .nav-link:hover, .dropdown-item:hover{
     padding-left:1em;
@@ -67,10 +66,13 @@ body{
     max-width:100%;
 }
 .prod_card img{
-    height:25rem;
+    height:19rem;
 }
 .prod_card{
     height:43rem;
+}
+.card-body{
+    padding-top: 0;
 }
 .prod_btn{
     text-decoration: none;
@@ -119,20 +121,22 @@ body{
 /* footer section  */
 #footerMain{
     background-color: rgb(15, 16, 59);
+    line-height: 1.3;
 }
 .footerHeader{
-    text-align: center;
+    text-align: left;
+    font-size: 1rem;
 }
 
 .footerCol ul {
    list-style-type: none;
-   margin:auto;
    width: 58%;
-   padding: 0.2em;
+   padding: 0.1em;
 }
 .footerCol li a{
     text-decoration: none;
     color:  rgb(142, 145, 148);
+    font-size: 0.8rem;
 }
 .footerCol li a:hover{
     color: aliceblue;
@@ -197,10 +201,10 @@ body{
         font-size: 1.5rem;
     }
     .prod_card img{
-        height:18rem;
+        height:12rem;
     }
     .prod_card{
-        height:38rem;
+        height:32rem;
     }
     .prod_lap img{
         height:11rem;

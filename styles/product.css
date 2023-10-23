@@ -1,0 +1,131 @@
+/* Navbar for product */
+.navProduct{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem;
+    align-items: center;
+    background-color: rgba(33, 4, 34,0.8);
+}
+.prodAvailable{
+    display: flex;
+    padding: 0;
+    align-items: center;
+}
+.prodAvailable li{
+    list-style-type: none;
+    padding-left: 1rem;
+}
+.prodAvailable li a{
+    text-decoration: none;
+    color: white;
+}
+.searchItems{
+    display: flex;
+    flex-direction: row;
+}
+#search{
+    border-radius: 0.4rem;
+    border: none;
+    margin-right: 0.4rem;
+    
+}
+#search:focus{
+    outline: none;
+}
+.cart{
+    position: relative;
+    margin-right:1rem
+}
+.cart i{
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+
+}
+#itemsAmount{
+    position: absolute;
+    top: -23px;
+    right: -10px;
+    color: white;
+    padding: 0.6px 2px;
+    background-color: red;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+@media screen and (max-width:600px){
+    .navProduct{
+        flex-direction: column;
+    }
+}
+
+/* Products Grid styling */
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(4,223px);
+    justify-content: center;
+    align-items: center;
+    gap:1.875rem; 
+    margin: 2rem 0;
+}
+
+@media screen and (max-width:1000px){
+    .product-container{
+        grid-template-columns: repeat(3,223px);
+    }
+}
+@media screen and (max-width:780px){
+    .product-container{
+        grid-template-columns: repeat(2,223px);
+    }
+}
+.grid-product{
+    border: 2px solid rgba(33, 4, 34,0.8);
+    border-radius: 0.4rem;
+    height: 23rem;
+    padding: 0.6rem;
+}
+.laptop{
+    height: 18rem;
+}
+.accessories{
+    height :26rem;
+}
+.imgItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.2rem;
+}
+.imgItem img{
+    width: 80%;
+}
+.price-cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.1rem;
+}
+@media screen and (max-width:500px){
+    .product-container{
+        grid-template-columns: repeat(1,270px);
+        font-size: 0.6rem;
+    }
+    .grid-product{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 10rem;
+        padding: 0.1rem;
+
+    }
+    .card-product h5{
+        font-size: 0.9rem;
+    }
+    .card-product h4{
+        font-size: 0.9rem;
+    }
+    
+}

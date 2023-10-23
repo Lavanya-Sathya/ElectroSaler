@@ -6,54 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ElectroDevice</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/product.css">
+
     <script src="https://kit.fontawesome.com/e744fd3660.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- navbar section -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#icon" id="icon">
-                <h3>ElectroSaler</h3>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon bg-light"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#icon">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#features">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <button class=" dropdown-toggle mt-2 " data-bs-toggle="dropdown" id="dropdown-btn" style="border:none; background: none; color:#222324" >
-                                Products 
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#smartPhone">SmartPhones</a></li>
-                              <li><a class="dropdown-item" href="#laptop">Laptop</a></li>
-                              <li><a class="dropdown-item" href="#accessories">Accessories</a></li>
-                            </ul>
-                          </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#review">Review</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <header id="header-container"></header>
+
 
     <!-- About section starts here -->
     <div id="demo" class="carousel slide" data-bs-ride="carousel">
@@ -109,119 +71,163 @@
     <div class="container-fluid my-5 pb-5" id="featureSection">
         <h1 class="text-center text-white p-3" id="features">Features</h1>
         <div id="feature"></div>
-        
+
     </div>
 
     <!-- Product section -->
     <div class="container mt-5">
         <h1 class="text-center" id="product">Products</h1>
         <!-- smartPhone section  -->
-        <h3 class="text-left my-4" id="smartPhone">SmartPhones</h3>
-        <div class="row">
-            <div class="col-md m-1">
-                <div class="card prod_card" style="border:1px solid rgb(17, 44, 68)">
-                    <div class="p-3">
-                        <img class="card-img-top prod_img" src="images/mobile/one_plus.jpg" alt="Card image">
-                    </div>
-                    <div class="card-body">
-                      <p class="card-text"><h4 class="card-title">OnePlus Nord CE 2 Lite 5G</h4> 8GB, 256GB, Snapdragon695 5G Processor. <br> <strong>17,999/-</strong></p>
-                      <a href="#" class="prod_btn">Know more</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md m-1">
-                <div class="card prod_card" style="border:1px solid rgb(17, 44, 68)">
-                    <div class="p-3">
-                        <img class="card-img-top prod_img" src="images/mobile/iqooz6.jpg" alt="Card image">
-                    </div>
-                    <div class="card-body">
-                      <p class="card-text"><h4 class="card-title">iQOO Z6 Lite 5G</h4> Stellar Green, 6GB, 128GB, World's First Snapdragon 4 Gen 1.<br> <strong>12,999/-</strong></p>
-                      <a href="#" class="prod_btn">Know more</a>
+        <h3 class="text-center" id="smartPhone">SmartPhones</h3>
+        <div class="product-container">
+            <div class="grid-product">
+                <div class="imgItem"><img src="images/mobile/one_plus.jpg" alt="iqooz6"></div>
+                <div class="card-product">
+                    <h5 class="titleProd">OnePlus Nord CE 2</h5>
+                    <p id="descProd"> 8GB,256GB, Snapdragon695 5G Processor.</p>
+                    <div class="price-cart">
+                        <h4><i class="fa-solid fa-indian-rupee-sign"></i> 17999</h4>
+                        <h4> <i class="fa-solid fa-cart-shopping"></i></h4>
                     </div>
                 </div>
             </div>
-            <div class="col-md m-1">
-                <div class="card prod_card" style="border:1px solid rgb(17, 44, 68)">
-                    <div class="p-3">
-                        <img class="card-img-top prod_img" src="images/mobile/redmi.jpg" alt="Card image">
+            <div class="grid-product">
+                <div class="imgItem"><img src="images/mobile/iqooz6.jpg" alt="iqooz6"></div>
+
+                <div class="card-product">
+                    <h5 class="titleProd">iQOO Z6 Lite 5G</h5>
+                    <p id="descProd">Stellar Green, 6GB, 128GB, World's First Snapdragon 4.</p>
+                    <div class="price-cart">
+                        <h4><i class="fa-solid fa-indian-rupee-sign"></i> 12000</h4>
+                        <h4> <i class="fa-solid fa-cart-shopping"></i></h4>
                     </div>
-                    <div class="card-body">
-                      <p class="card-text"><h4 class="card-title">Redmi 12 5G</h4> Jade Black, 4GB 128GB, India's 1st Snapdragon 4 Gen 2.<br> <strong>11,999/-</strong></p>
-                      <a href="#" class="prod_btn">Know more</a>
+                </div>
+            </div>
+            <div class="grid-product">
+                <div class="imgItem"><img src="images/mobile/redmi.jpg" alt="redmi"></div>
+
+                <div class="card-product">
+                    <h5 class="titleProd">Redmi 12 5G</h5>
+                    <p id="descProd">Jade Black, 4GB 128GB, India's 1st Snapdragon4.</p>
+                    <div class="price-cart">
+                        <h4><i class="fa-solid fa-indian-rupee-sign"></i> 11999</h4>
+                        <h4> <i class="fa-solid fa-cart-shopping"></i></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-product">
+                <div class="imgItem"><img src="images/mobile/iqooz6.jpg" alt="iqooz6"></div>
+
+                <div class="card-product">
+                    <h5 class="titleProd">iQOO Z6 Lite 5G</h5>
+                    <p id="descProd">Stellar Green, 6GB, 128GB, World's First Snapdragon 4.</p>
+                    <div class="price-cart">
+                        <h4><i class="fa-solid fa-indian-rupee-sign"></i> 12000</h4>
+                        <h4> <i class="fa-solid fa-cart-shopping"></i></h4>
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- laptop section  -->
-        <h3 class="text-left my-4" id="laptop">Laptops</h3>
-        <div class="row">
-            <div class="col-md m-1">
-                <div class="card prod_lap" style="border:1px solid rgb(17, 44, 68)">
-                    <div class="p-3">
-                        <img class="card-img-top" src="images/laptop/acer.jpg" alt="Card image">
-                    </div>
-                    <div class="card-body">
-                      <p class="card-text"><h4 class="card-title"> Acer Nitro V Gaming Laptop</h4> 13th Gen Intel Core i5-13420H with RTX 4050 Graphics 6GB VRAM.<br> <strong>79,999/-</strong></p>
-                      <a href="#" class="prod_btn">Know more</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md m-1">
-                <div class="card prod_lap" style="border:1px solid rgb(17, 44, 68)">
-                    <div class="p-3">
-                        <img class="card-img-top " src="images/laptop/lenovo.jpg" alt="Card image">
-                    </div>
-                    <div class="card-body">
-                      <p class="card-text"><h4 class="card-title">Acer Aspire Lite </h4>11th Gen Intel Core i3 Premium Metal Laptop<br> <strong>30,999/-</strong></p>
-                      <a href="#" class="prod_btn">Know more</a>
+        <h3 class="text-center" id="laptop">Laptops</h3>
+        <div class="product-container">
+            <div class="grid-product laptop">
+                <div class="imgItem"><img src="images/laptop/acer.jpg" alt="iqooz6"></div>
+                <div class="card-product">
+                    <h5 class="titleProd">Acer Nitro V Gaming </h5>
+                    <p id="descProd"> 13th Gen Intel Core i5-13420H with RTX.</p>
+                    <div class="price-cart">
+                        <h4><i class="fa-solid fa-indian-rupee-sign"></i> 79,999</h4>
+                        <h4> <i class="fa-solid fa-cart-shopping"></i></h4>
                     </div>
                 </div>
             </div>
-            <div class="col-md m-1">
-                <div class="card prod_lap" style="border:1px solid rgb(17, 44, 68)">
-                    <div class="p-3">
-                        <img class="card-img-top" src="images/laptop/dell.jpg" alt="Card image">
+            <div class="grid-product laptop">
+                <div class="imgItem"><img src="images/laptop/lenovo.jpg" alt="iqooz6"></div>
+
+                <div class="card-product">
+                    <h5 class="titleProd">Acer Aspire Lite </h5>
+                    <p id="descProd">11th Gen Intel Core i3 Premium Metal Laptop</p>
+                    <div class="price-cart">
+                        <h4><i class="fa-solid fa-indian-rupee-sign"></i> 30,999</h4>
+                        <h4> <i class="fa-solid fa-cart-shopping"></i></h4>
                     </div>
-                    <div class="card-body">
-                      <p class="card-text"><h4 class="card-title">Dell Vostro 3520 Laptop</h4> Intel Core i3-1115G4 Processor (up to 4.10 GHz, 6MB Cache, 2 Cores).<br> <strong>37,999/-</strong></p>
-                      <a href="#" class="prod_btn">Know more</a>
+                </div>
+            </div>
+            <div class="grid-product laptop">
+                <div class="imgItem"><img src="images/laptop/dell.jpg" alt="redmi"></div>
+
+                <div class="card-product">
+                    <h5 class="titleProd">Dell Vostro 3520 Laptop</h5>
+                    <p id="descProd">Intel Core i3-1115G4 Processor</p>
+                    <div class="price-cart">
+                        <h4><i class="fa-solid fa-indian-rupee-sign"></i> 37,999</h4>
+                        <h4> <i class="fa-solid fa-cart-shopping"></i></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-product laptop">
+                <div class="imgItem"><img src="images/laptop/dell.jpg" alt="redmi"></div>
+
+                <div class="card-product">
+                    <h5 class="titleProd">Dell Vostro 3520 Laptop</h5>
+                    <p id="descProd">Intel Core i3-1115G4 Processor.</p>
+                    <div class="price-cart">
+                        <h4><i class="fa-solid fa-indian-rupee-sign"></i> 37,999</h4>
+                        <h4> <i class="fa-solid fa-cart-shopping"></i></h4>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Accessories section  -->
-        <h3 class="text-left my-4" id="accessories">Electronic Accessories</h3>
-        <div class="row">
-            <div class="col-md m-1">
-                <div class="card prod_lap" style="border:1px solid rgb(17, 44, 68)">
-                    <div class="p-3">
-                        <img class="card-img-top" src="images/accessories/headset.jpg" alt="Card image">
-                    </div>
-                    <div class="card-body">
-                      <p class="card-text">OnePlus Nord Buds 2r True Wireless in Ear Earbuds with Mic, 12.4mm Drivers, Playback:Upto 38hr case,4-Mic Design.<br> <strong>1,999/-</strong></p>
-                      <a href="#" class="prod_btn">Know more</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md m-1">
-                <div class="card prod_lap" style="border:1px solid rgb(17, 44, 68)">
-                    <div class="p-3">
-                        <img class="card-img-top " src="images/accessories/power.jpg" alt="Card image">
-                    </div>
-                    <div class="card-body">
-                      <p class="card-text">Ambrane 27000mAh Li-Polymer Powerbank with Type C and USB Ports, Fast Charging.<br> <strong>1,999/-</strong></p>
-                      <a href="#" class="prod_btn">Know more</a>
+        <h3 class="text-center" id="accessories">Electronic Accessories</h3>
+        
+        <div class="product-container">
+            <div class="grid-product accessories">
+                <div class="imgItem"><img src="images/accessories/headset.jpg" alt="iqooz6"></div>
+                <div class="card-product">
+                    <p id="descProd">OnePlus Nord Buds 2r True Wireless in Ear Earbuds with Mic, 12.4mm Drivers,
+                        Playback:Upto 38hr case,4-Mic Design.</p>
+                    <div class="price-cart">
+                        <h4><i class="fa-solid fa-indian-rupee-sign"></i>1,999</h4>
+                        <h4> <i class="fa-solid fa-cart-shopping"></i></h4>
                     </div>
                 </div>
             </div>
-            <div class="col-md m-1">
-                <div class="card prod_lap" style="border:1px solid rgb(17, 44, 68)">
-                    <div class="p-3">
-                        <img class="card-img-top" src="images/accessories/mouse.jpg" alt="Card image">
+            <div class="grid-product accessories">
+                <div class="imgItem"><img src="images/accessories/power.jpg" alt="iqooz6"></div>
+
+                <div class="card-product">
+                    <p id="descProd">Ambrane 27000mAh Li-Polymer Powerbank with Type C and USB Ports, Fast
+                        Charging.</p>
+                    <div class="price-cart">
+                        <h4><i class="fa-solid fa-indian-rupee-sign"></i>1,999</h4>
+                        <h4> <i class="fa-solid fa-cart-shopping"></i></h4>
                     </div>
-                    <div class="card-body">
-                      <p class="card-text">Logitech M221 Wireless Mouse, Silent Buttons, 2.4 GHz with USB Mini Receiver, 1000 DPI Optical Tracking, 18-Month Battery Life.<br> <strong>599/-</strong></p>
-                      <a href="#" class="prod_btn">Know more</a>
+                </div>
+            </div>
+            <div class="grid-product accessories">
+                <div class="imgItem"><img src="images/accessories/mouse.jpg" alt="redmi"></div>
+
+                <div class="card-product">
+                    <p id="descProd">Logitech M221 Wireless Mouse, Silent Buttons, 2.4 GHz with USB Mini
+                        Receiver, 1000 DPI Optical Tracking, 18-Month Battery Life.</p>
+                    <div class="price-cart">
+                        <h4><i class="fa-solid fa-indian-rupee-sign"></i> 599</h4>
+                        <h4> <i class="fa-solid fa-cart-shopping"></i></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-product accessories">
+                <div class="imgItem"><img src="images/accessories/power.jpg" alt="iqooz6"></div>
+
+                <div class="card-product">
+                    <p id="descProd">Ambrane 27000mAh Li-Polymer Powerbank with Type C and USB Ports, Fast
+                        Charging.</p>
+                    <div class="price-cart">
+                        <h4><i class="fa-solid fa-indian-rupee-sign"></i>1,999</h4>
+                        <h4> <i class="fa-solid fa-cart-shopping"></i></h4>
                     </div>
                 </div>
             </div>
@@ -246,7 +252,12 @@
                     <span class="h6"> | Nice phone with good features besides a small screen</span>
                 </div>
                 <span class="text-muted"> Reviewed by verified user on 1 Oct 2023</span>
-                <p class="text-justify review">I can give a honest review of this phone because I've had it for three months. The battery is incredible. You shouldn't worry about it. Although the charger is 44 w, charging takes about 1 hour and 20 minutes. Amazing camera. both the back camera and the selfie. A back camera with excellent ois is available. The image quality is excellent. Excellent processor. 6GB of RAM and an additional 6GB of virtual RAM (very quick processor). You can upgrade to an excellent big screen phone if you have a large budget. An excellent phone overall.</p>
+                <p class="text-justify review">I can give a honest review of this phone because I've had it for three
+                    months. The battery is incredible. You shouldn't worry about it. Although the charger is 44 w,
+                    charging takes about 1 hour and 20 minutes. Amazing camera. both the back camera and the selfie. A
+                    back camera with excellent ois is available. The image quality is excellent. Excellent processor.
+                    6GB of RAM and an additional 6GB of virtual RAM (very quick processor). You can upgrade to an
+                    excellent big screen phone if you have a large budget. An excellent phone overall.</p>
                 </p>
             </div>
             <div class="col-lg-12 reviewCol">
@@ -263,8 +274,10 @@
                     <span class="h6"> | Performance and Features in a Slim Package</span>
                 </div>
                 <span class="text-muted"> Reviewed by verified user on 10 Oct 2023</span>
-                <p class="text-justify review">The battery backup is excellent. I only charge once a day because I use my phone frequently.
-                    The quality of the Rare (back) camera is excellent, however the front camera performs very poorly in dim light.
+                <p class="text-justify review">The battery backup is excellent. I only charge once a day because I use
+                    my phone frequently.
+                    The quality of the Rare (back) camera is excellent, however the front camera performs very poorly in
+                    dim light.
                     The process of reading fingerprints is somewhat slow.
                     Good screen display quality.</p>
                 </p>
@@ -277,8 +290,9 @@
         <h1 class="text-center" id="contact">Contact Us</h1>
         <div class="container">
             <div class="col-lg-12">
-                <p class="text-center">You are welcome to ask questions and offer feedback in this section.</p> 
-                <p class="text-center"> That will also assist us in enhancing and improving the user experience, product, and service.</p>  
+                <p class="text-center">You are welcome to ask questions and offer feedback in this section.</p>
+                <p class="text-center"> That will also assist us in enhancing and improving the user experience,
+                    product, and service.</p>
             </div>
         </div>
         <form action="#" method="post" id="contactForm">
@@ -300,49 +314,8 @@
     </div>
 
     <!-- footer section -->
-    <footer class="mt-5">
-        <div class="container-fluid" id="footerMain">
-            <div class="container p-5">
-                <div class="row" id="footerRow">
-                    <div class="col-lg-2 p-4 footerCol">
-                        <p class="h4 text-white footerHeader">MENU</p>
-                        <ul>
-                            <li><a href="#icon">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#features">Feature</a></li>
-                            <li><a href="#">Product</a></li>
-                            <li><a href="#review">Review</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4 p-4 footerCol ">
-                        <p class="h4 text-white footerHeader">Terms</p>
-                        <ul>
-                            <li><a href="#">Service Agreement</a></li>
-                            <li><a href="#">Terms and Condition</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Branches</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 p-3 footerCol ">
-                        <p class="h4 text-white footerHeader">Contact</p>
-                        <ul>
-                            <li><i class="fa-regular fa-envelope" style="color: #afb1b6;"></i></i><a
-                                    href="mailto:sathyalavanya5@gmail.com"> sathyalavanya5@gmail.com</a></li>
-                            <li><i class="fa-brands fa-github" style="color: #ecedef;"></i><a
-                                    href="https://github.com/Lavanya-Sathya" target="_blank"> GitHub</a></li>
-                            <li><i class="fa-brands fa-linkedin" style="color: #ecedef;"></i><a
-                                    href="https://www.linkedin.com/in/lavanya-s-a588a9195/" target="_blank">
-                                    LinkedIn</a></li>
-                        </ul>
+    <div id="footer-container"></div>
 
-                    </div>
-                </div>
-            </div>
-
-            <p class="text-center p-4 m-0 text-light h6 border-top">&copy; 2023 ElectroSaler. All Rights Reserved</p>
-        </div>
-    </footer>
     <script src="script/feature.js"></script>
     <script src="script/main.js"></script>
 </body>
