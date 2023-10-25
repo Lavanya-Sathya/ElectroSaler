@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="styles/product.css">
     <script src="https://kit.fontawesome.com/e744fd3660.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <!-- navbar section -->
     <header id="header-container"></header>
@@ -27,61 +29,44 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Product section -->
-    <div class="product-container">
-        <div class="grid-product">
-            <div class="imgItem"><img src="images/mobile/one_plus.jpg" alt="iqooz6"></div>
-            <div class="card-product">
-                <h5 class="titleProd">OnePlus Nord CE 2</h5>
-                <p id="descProd"> 8GB,256GB, Snapdragon695 5G Processor.</p>
-                <div class="price-cart">
-                    <h4><i class="fa-solid fa-indian-rupee-sign"></i> 17999</h4>
-                    <h4> <i class="fa-solid fa-cart-shopping"></i></h4>
-                </div>
-            </div>
-        </div>
-        <div class="grid-product">
-            <div class="imgItem"><img src="images/mobile/iqooz6.jpg" alt="iqooz6"></div>
+    <div class="product-container" id="product-container">
 
-            <div class="card-product">
-                <h5 class="titleProd">iQOO Z6 Lite 5G</h5>
-                <p id="descProd">Stellar Green, 6GB, 128GB, World's First Snapdragon 4.</p>
-                <div class="price-cart">
-                    <h4><i class="fa-solid fa-indian-rupee-sign"></i> 12000</h4>
-                    <h4> <i class="fa-solid fa-cart-shopping"></i></h4>
-                </div>
-            </div>
-        </div>
-        <div class="grid-product">
-            <div class="imgItem"><img src="images/mobile/redmi.jpg" alt="redmi"></div>
-
-            <div class="card-product">
-                <h5 class="titleProd">Redmi 12 5G</h5>
-                <p id="descProd">Jade Black, 4GB 128GB, India's 1st Snapdragon4.</p>
-                <div class="price-cart">
-                    <h4><i class="fa-solid fa-indian-rupee-sign"></i> 11999</h4>
-                    <h4> <i class="fa-solid fa-cart-shopping"></i></h4>
-                </div>
-            </div>
-        </div>
-        <div class="grid-product">
-            <div class="imgItem"><img src="images/mobile/iqooz6.jpg" alt="iqooz6"></div>
-
-            <div class="card-product">
-                <h5 class="titleProd">iQOO Z6 Lite 5G</h5>
-                <p id="descProd">Stellar Green, 6GB, 128GB, World's First Snapdragon 4.</p>
-                <div class="price-cart">
-                    <h4><i class="fa-solid fa-indian-rupee-sign"></i> 12000</h4>
-                    <h4> <i class="fa-solid fa-cart-shopping"></i></h4>
-                </div>
-            </div>
-        </div>
     </div>
-
+    <!-- <div class="prod-Details">
+        <div class="overlay"></div>
+        <div class="popUp">
+            <div class="popup-product">
+                <div class="img-popup">
+                    <img src="images/mobile/one_plus.jpg" alt="iqooz6">
+                </div>
+                <div class="card-popup">
+                    <i class="fa-solid fa-x" id="closePopup"></i>
+                    <h5 class="title-popup">OnePlus Nord CE 2</h5>
+                    <p>Assured product</p>
+                    <p id="desc-popup"> 8GB,256GB, Snapdragon695 5G Processor.</p>
+                    <div class="price-cart-popup">
+                        <h4><i class="fa-solid fa-indian-rupee-sign"></i> 17999</h4>
+                        <button id="cartButton">Add to cart</button>
+                    </div>
+                    <div class="cartProd">
+                        <i class="fa-solid fa-minus" style="color: #ee656c;"></i>
+                        <span classs="quantity">0</span></h5>
+                        <i class="fa-solid fa-plus" style="color: #8dec8e;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
     <!-- footer section -->
     <div id="footer-container"></div>
 
     <script src="script/main.js"></script>
+    <script src="script/productData.js"></script>
+    <script src="script/product.js"></script>
+
+
 </body>
+
 </html>
