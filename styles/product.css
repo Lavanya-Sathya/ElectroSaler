@@ -40,7 +40,7 @@
   padding: 0.5rem;
   border-radius: 0.2rem;
 }
-#itemsAmount {
+#items {
   position: absolute;
   top: -23px;
   right: -10px;
@@ -114,14 +114,29 @@
   align-items: center;
   padding: 0 0.1rem;
 }
+a {
+  text-decoration: none;
+  padding: 3px;
+}
 #cartButton {
   font-size: 0.8rem;
-  background-color: white;
+  background-color: rgba(33, 4, 34);
+  color: white;
   border-radius: 0.5rem;
+  border: none;
 }
 #cartButton:hover {
-  border: 2px solid rgba(33, 4, 34, 0.8);
-  color: rgba(33, 4, 34, 0.8);
+  background-color: rgba(89, 58, 90, 0.8);
+}
+#cartButtonRemove {
+  font-size: 0.8rem;
+  background-color: rgb(128, 29, 5);
+  color: white;
+  border-radius: 0.5rem;
+  border: none;
+}
+#cartButtonRemove:hover {
+  background-color: rgba(179, 104, 94, 0.8);
 }
 @media screen and (max-width: 500px) {
   .product-container {

@@ -1,9 +1,13 @@
 const productContainerMobile = document.getElementById("product-container");
+const items = document.getElementById("items");
+let basket = JSON.parse(localStorage.getItem("data")) || [];
+items.innerHTML = basket.length;
 
 const generateMobile = () => {
   return (productContainerMobile.innerHTML = smartMobilePhones
     .map((x) => {
       const { id, name, descp, price, img } = x;
+      const search = basket.find((x) => x.id === id);
       return `<div class="grid-product" id="cardHoverEffect">
             <div class="imgItem"><img src=${img} alt=${name}></div>
             <div class="card-product">
@@ -11,7 +15,12 @@ const generateMobile = () => {
                 <p id="descProd">${descp}</p>
                 <div class="price-cart">
                     <h4><i class="fa-solid fa-indian-rupee-sign"></i>${price}</h4>
-                    <button id="cartButton" value=${id}>Add to cart</button>
+                    <button class="cartButton" id = ${
+                      search === undefined ? "cartButton" : "cartButtonRemove"
+                    }  data-id=${id} onclick="addToBasket(${id})" type="button">
+                   ${
+                     search === undefined ? "Add to cart" : "Remove Item"
+                   }   </button>
                 </div>
             </div>
         </div>`;
@@ -21,10 +30,9 @@ const generateMobile = () => {
 
 generateMobile();
 
+const cartButton = document.querySelectorAll(".cartButton");
 const cardHoverEffect = document.querySelectorAll("#cardHoverEffect");
 const overlay = document.querySelector(".overlay");
-const popUp = document.querySelector(".popUp");
-const closePopup = document.getElementById("closePopup");
 
 cardHoverEffect.forEach((cardHover) => {
   cardHover.addEventListener("mouseover", () => {
@@ -37,15 +45,38 @@ cardHoverEffect.forEach((cardHover) => {
     cardHover.classList.remove("enlarge");
   });
 });
-cardHoverEffect.forEach((cardHover) => {
-  cardHover.addEventListener("click", () => {
-    if (window.innerWidth >= 900) {
-      overlay.style.display = "block";
-      popUp.style.display = "block";
+// onclick event handling for add or remove item from basket
+cartButton.forEach((idVal) => {
+  idVal.addEventListener("click", (event) => {
+    const id = event.target.getAttribute("data-id");
+    console.log(id);
+    const search = basket.find((x) => x.id === id);
+    if (!search) {
+      addToBasket(id);
+      event.target.innerHTML = "Remove Item";
+      event.target.id = "cartButtonRemove";
+      alert("Item Added to cart");
+    } else {
+      event.target.innerHTML = "Add to cart";
+      event.target.id = "cartButton";
+      removeFromBasket(id);
+      alert("Item removed from the cart");
     }
   });
 });
-closePopup.addEventListener("click", () => {
-  overlay.style.display = "none";
-  popUp.style.display = "none";
-});
+// Add item to cart
+let addToBasket = (id) => {
+  basket.push({
+    id: id,
+    item: 1,
+  });
+  items.innerHTML = basket.length;
+  localStorage.setItem("data", JSON.stringify(basket));
+};
+
+// remove Item from cart
+let removeFromBasket = (id) => {
+  basket = basket.filter((Item) => Item.id !== id);
+  items.innerHTML = basket.length;
+  localStorage.setItem("data", JSON.stringify(basket));
+};
