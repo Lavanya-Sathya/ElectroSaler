@@ -1,221 +1,247 @@
-body{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    font-size: 1rem;
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  font-size: 1rem;
 }
 /* home section  */
-#icon{
-    margin-right: 24em;
-    color:rgb(15, 16, 59);
-    font-size: 1.5rem;
+#icon {
+  margin-right: 24em;
+  color: rgb(15, 16, 59);
+  font-size: 1.5rem;
 }
-.nav-link:hover, .dropdown-item:hover{
-    padding-left:1em;
-    border-bottom: 2px solid rgb(65, 3, 39);
-    color: rgb(15, 16, 59);
-    /* background-image: linear-gradient(50deg, rgb(218, 158, 193), rgb(87, 21, 83)); */
-    border-radius: 0.2em;
-    background-color: white;
+.nav-link:hover,
+.dropdown-item:hover {
+  padding-left: 1em;
+  border-bottom: 2px solid rgb(65, 3, 39);
+  color: rgb(15, 16, 59);
+  /* background-image: linear-gradient(50deg, rgb(218, 158, 193), rgb(87, 21, 83)); */
+  border-radius: 0.2em;
+  background-color: white;
 }
 
-.background{
-    max-width: 100%;
-    width:100%;
-    aspect-ratio: 2/0.75;
+.background {
+  max-width: 100%;
+  width: 100%;
+  aspect-ratio: 2/0.75;
 }
-#textCarousel1{
-    position: absolute;
-    top:3rem;
-    font-size: 2rem;
-    text-align: center;
+#textCarousel1 {
+  position: absolute;
+  top: 3rem;
+  font-size: 2rem;
+  text-align: center;
 }
-#textCarousel3{
-    position: absolute;
-    top:3em;
-    left:1em;
-    text-align: left;
-    font-size: 2rem;
-    
+#textCarousel3 {
+  position: absolute;
+  top: 3em;
+  left: 1em;
+  text-align: left;
+  font-size: 2rem;
 }
-#about, #features, #contact, #review, #product,
-#smartPhone, #laptop, #accessories{
-    color:rgb(15, 16, 59);
-    font-family: Arial, Helvetica, sans-serif;
+#about,
+#features,
+#contact,
+#review,
+#product,
+#smartPhone,
+#laptop,
+#accessories {
+  color: rgb(15, 16, 59);
+  font-family: Arial, Helvetica, sans-serif;
 }
 /* feature section  */
-#featureSection{
-    background-image: linear-gradient(50deg,rgba(33, 4, 34,0.8),rgba(56, 7, 102, 0.9),rgb(53, 8, 31));
+#featureSection {
+  background-image: linear-gradient(
+    50deg,
+    rgba(33, 4, 34, 0.8),
+    rgba(56, 7, 102, 0.9),
+    rgb(53, 8, 31)
+  );
 }
-.featureHeading{
-    padding: 2rem 1rem 2rem;
+.featureHeading {
+  padding: 2rem 1rem 2rem;
 }
 .feature_img {
-    width:100%;
-    opacity: 0.8;
-    height:20rem;
-    border-radius: 5px;
+  width: 100%;
+  opacity: 0.8;
+  height: 20rem;
+  border-radius: 5px;
 }
 
 /* Product Section */
-.prod_img{
-    height:auto;
-    min-height:100%;
-    max-width:100%;
+.prod_img {
+  height: auto;
+  min-height: 100%;
+  max-width: 100%;
 }
-.prod_card img{
-    height:19rem;
+.prod_card img {
+  height: 19rem;
 }
-.prod_card{
-    height:43rem;
+.prod_card {
+  height: 43rem;
 }
-.card-body{
-    padding-top: 0;
+.card-body {
+  padding-top: 0;
 }
-.prod_btn{
-    text-decoration: none;
-    color:rgb(252, 252, 252);
-    background-image: linear-gradient(50deg, rgb(109, 88, 136), rgb(133, 38, 126));
-    border: 2px solid rgb(133, 38, 126);
-    padding: 0.4rem;
-    border-radius: 0.2rem;
+.prod_btn {
+  text-decoration: none;
+  color: rgb(252, 252, 252);
+  background-image: linear-gradient(
+    50deg,
+    rgb(109, 88, 136),
+    rgb(133, 38, 126)
+  );
+  border: 2px solid rgb(133, 38, 126);
+  padding: 0.4rem;
+  border-radius: 0.2rem;
 }
-.prod_btn{
-    background-image: linear-gradient(50deg, rgb(218, 158, 193), rgb(133, 38, 126));
+.prod_btn {
+  background-image: linear-gradient(
+    50deg,
+    rgb(218, 158, 193),
+    rgb(133, 38, 126)
+  );
 }
-.prod_lap img{
-    height:15rem;
+.prod_lap img {
+  height: 15rem;
 }
-.prod_lap{
-    height:33rem;
+.prod_lap {
+  height: 33rem;
 }
 /* review section  */
-.star{
-    color: rgb(17, 44, 68);
+.star {
+  color: rgb(17, 44, 68);
 }
-.no_star{
-    color: rgb(205, 212, 218);
+.no_star {
+  color: rgb(205, 212, 218);
 }
-.review{
-    background-image: linear-gradient(50deg, rgb(218, 158, 193), rgb(133, 38, 126));
-    padding:1em;
-    border-radius: 0.5em;
+.review {
+  background-image: linear-gradient(
+    50deg,
+    rgb(218, 158, 193),
+    rgb(133, 38, 126)
+  );
+  padding: 1em;
+  border-radius: 0.5em;
 }
 /* contact section  */
-#contactForm{
-    width:50%;
-    margin:auto;
+#contactForm {
+  width: 50%;
+  margin: auto;
 }
-#formBtn{
-    background-image: linear-gradient(50deg, rgb(218, 158, 193), rgb(87, 21, 83));
-    padding: 10px 20px;
-    border: 2px solid rgb(15, 16, 59) ;
-    border-radius: 4px;
-    width: 100%;
+#formBtn {
+  background-image: linear-gradient(50deg, rgb(218, 158, 193), rgb(87, 21, 83));
+  padding: 10px 20px;
+  border: 2px solid rgb(15, 16, 59);
+  border-radius: 4px;
+  width: 100%;
 }
-#formBtn:hover{
-    background-image: linear-gradient(50deg, rgb(219, 218, 219), rgb(231, 178, 228));
+#formBtn:hover {
+  background-image: linear-gradient(
+    50deg,
+    rgb(219, 218, 219),
+    rgb(231, 178, 228)
+  );
 }
 /* footer section  */
-#footerMain{
-    background-color: rgb(15, 16, 59);
-    line-height: 1.3;
+#footerMain {
+  background-color: rgb(15, 16, 59);
+  line-height: 1.3;
 }
-.footerHeader{
-    text-align: left;
-    font-size: 1rem;
+.footerHeader {
+  text-align: left;
+  font-size: 1rem;
 }
 
 .footerCol ul {
-   list-style-type: none;
-   width: 58%;
-   padding: 0.1em;
+  list-style-type: none;
+  width: 58%;
+  padding: 0.1em;
 }
-.footerCol li a{
-    text-decoration: none;
-    color:  rgb(142, 145, 148);
-    font-size: 0.8rem;
+.footerCol li a {
+  text-decoration: none;
+  color: rgb(142, 145, 148);
+  font-size: 0.8rem;
 }
-.footerCol li a:hover{
-    color: aliceblue;
+.footerCol li a:hover {
+  color: aliceblue;
 }
-@media only screen and (max-width:780px){
-    #icon{
-        margin-right: 6em;
-    }
-    #textCarousel1{
-        font-size: 0.7rem;
-        top:1rem;
-    }
-    #textCarousel3{
-        font-size: 0.7rem;
-    }
-    .featureHeading{
-        padding: 0.4rem;
-        margin-bottom: 0;
-        margin-left:0.4rem;
-    }
-    .prod_card img{
-        height:18rem;
-    }
-    .prod_card{
-        height:38rem;
-        width:70%;
-        margin: auto;
-        margin-top: 1rem;
-    }
-    .prod_lap img{
-        height:13rem;
-    }
-    .prod_lap{
-        height:34rem;
-        width:80%;
-        margin: auto;
-        margin-top: 1rem;
-    }
-    #contactForm{
-        width:80%;
-    }
-    .footerHeader{
-        text-align: left;
-    }
-    .footerCol ul {
-        width: 100%;
-     }
+@media only screen and (max-width: 780px) {
+  #icon {
+    margin-right: 6em;
+  }
+  #textCarousel1 {
+    font-size: 0.7rem;
+    top: 1rem;
+  }
+  #textCarousel3 {
+    font-size: 0.7rem;
+  }
+  .featureHeading {
+    padding: 0.4rem;
+    margin-bottom: 0;
+    margin-left: 0.4rem;
+  }
+  .prod_card img {
+    height: 18rem;
+  }
+  .prod_card {
+    height: 38rem;
+    width: 70%;
+    margin: auto;
+    margin-top: 1rem;
+  }
+  .prod_lap img {
+    height: 13rem;
+  }
+  .prod_lap {
+    height: 34rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+  }
+  #contactForm {
+    width: 80%;
+  }
+  .footerHeader {
+    text-align: left;
+  }
+  .footerCol ul {
+    width: 100%;
+  }
 }
 
-@media only screen and (min-width:780px) and (max-width:1200px){
-    #icon{
-        margin-right: 15em;
-    
-    }
-    #textCarousel1{
-        font-size: 1.5rem;
-    }
-    .featureHeading{
-        padding: 0.8rem;
-    }
-    #textCarousel3{
-        font-size: 1.5rem;
-    }
-    .prod_card img{
-        height:12rem;
-    }
-    .prod_card{
-        height:32rem;
-    }
-    .prod_lap img{
-        height:11rem;
-    }
-    .prod_lap{
-        height:35rem;
-    }
-    .footerHeader{
-        text-align: left;
-    }
-    .footerCol ul {
-        width: 100%;
-     }
+@media only screen and (min-width: 780px) and (max-width: 1200px) {
+  #icon {
+    margin-right: 15em;
+  }
+  #textCarousel1 {
+    font-size: 1.5rem;
+  }
+  .featureHeading {
+    padding: 0.8rem;
+  }
+  #textCarousel3 {
+    font-size: 1.5rem;
+  }
+  .prod_card img {
+    height: 12rem;
+  }
+  .prod_card {
+    height: 32rem;
+  }
+  .prod_lap img {
+    height: 11rem;
+  }
+  .prod_lap {
+    height: 35rem;
+  }
+  .footerHeader {
+    text-align: left;
+  }
+  .footerCol ul {
+    width: 100%;
+  }
 }

@@ -19,7 +19,7 @@ const generateMobile = () => {
                       search === undefined ? "cartButton" : "cartButtonRemove"
                     }  data-id=${id} onclick="addToBasket(${id})" type="button">
                    ${
-                     search === undefined ? "Add to cart" : "Remove Item"
+                     search === undefined ? "Add to cart" : "Added to cart"
                    }   </button>
                 </div>
             </div>
@@ -49,18 +49,21 @@ cardHoverEffect.forEach((cardHover) => {
 cartButton.forEach((idVal) => {
   idVal.addEventListener("click", (event) => {
     const id = event.target.getAttribute("data-id");
-    console.log(id);
     const search = basket.find((x) => x.id === id);
     if (!search) {
       addToBasket(id);
-      event.target.innerHTML = "Remove Item";
+      event.target.innerHTML = "Added to cart";
       event.target.id = "cartButtonRemove";
       alert("Item Added to cart");
     } else {
-      event.target.innerHTML = "Add to cart";
-      event.target.id = "cartButton";
-      removeFromBasket(id);
-      alert("Item removed from the cart");
+      const confirmItemRemoval = confirm(
+        "Are you Sure you want to remove item from cart"
+      );
+      if (confirmItemRemoval) {
+        event.target.innerHTML = "Add to cart";
+        event.target.id = "cartButton";
+        removeFromBasket(id);
+      }
     }
   });
 });
