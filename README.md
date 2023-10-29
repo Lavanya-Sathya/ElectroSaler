@@ -45,7 +45,7 @@ You can customize the ElectroSale website to fit your specific needs:
 - Product images from [amazon](https://www.amazon.in/).
 
 ## Screenshots
-![Screenshot 1](images/mobile_screenshot1.jpeg)
-![Screenshot 2](images/mobile_screenshot2.jpeg)
+![Screenshot 1](images/screenshot1.PNG)
+![Screenshot 2](images/mobile_screenshot1.jpeg)
 ![Screenshot 3](images/mobile_screenshot3.jpeg)
 
