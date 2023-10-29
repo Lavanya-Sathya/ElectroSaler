@@ -296,21 +296,29 @@
                     product, and service.</p>
             </div>
         </div>
-        <form action="#" method="post" id="contactForm">
+        <form onsubmit="return ValidateContactForm()" action="#contact" id="contactForm">
             <div class="mb-3 mt-3">
-                <label for="name" class="form-label">Name:</label>
-                <input type="name" class="form-control" id="name" placeholder="Enter name" name="name" required>
+                <label for="name_Contact" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name_Contact" placeholder="Enter name" name="name"
+                    onkeyup="ValidateContactName()">
+                <span id="error_name_contact"></span>
             </div>
             <div class="mb-3 ">
-                <label for="email" class="form-label">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+                <label for="email_contact" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email_contact" placeholder="Enter email" name="email"
+                    onkeyup="ValidateContactEmail()">
+                <span id="error_email_contact"></span>
+
             </div>
             <div class="mb-3">
-                <label for="comment">Query:</label>
-                <textarea class="form-control" rows="5" id="comment" name="text" required></textarea>
+                <label for="comment_contact">Query:</label>
+                <textarea class="form-control" rows="5" id="comment_contact" name="text"
+                    onkeyup="ValidateContactQuery()"></textarea>
+                <span id="error_query_contact"></span>
             </div>
 
             <button type="submit" id="formBtn">Submit</button>
+            <span id="error_submit_contact"></span>
         </form>
     </div>
 

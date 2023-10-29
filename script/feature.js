@@ -42,3 +42,73 @@ cardHoverEffect.forEach((cardHover) => {
     cardHover.classList.remove("enlarge");
   });
 });
+
+// Validation for contact section
+const nameContact = document.getElementById("name_Contact");
+const emailContact = document.getElementById("email_contact");
+const queryContact = document.getElementById("comment_contact");
+const nameError = document.getElementById("error_name_contact");
+const emailError = document.getElementById("error_email_contact");
+const queryError = document.getElementById("error_query_contact");
+const errorMessage = document.getElementById("error_submit_contact");
+
+function ValidateContactName() {
+  const name = nameContact.value;
+  if (name === "") {
+    nameError.innerHTML = "Name is Required";
+    console.log("name is required");
+    nameError.style.color = "red";
+    return false;
+  } else {
+    nameError.innerHTML = "";
+    return true;
+  }
+}
+function ValidateContactEmail() {
+  var email = emailContact.value;
+
+  if (email.length == 0) {
+    emailError.innerHTML = "Email is required";
+    emailError.style.color = "red";
+    return false;
+  } else if (!email.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)) {
+    emailError.innerHTML = "Email is invalid";
+    emailError.style.color = "red";
+    return false;
+  } else {
+    emailError.innerHTML = "";
+    return true;
+  }
+}
+function ValidateContactQuery() {
+  var query = queryContact.value;
+
+  if (query.length == 0) {
+    queryError.innerHTML = "Please mention your query";
+    queryError.style.color = "red";
+    return false;
+  }
+  // else if (query.length <= 30) {
+  //   queryError.innerHTML = "query length";
+  //   queryError.style.color = "red";
+  //   return false;
+  // }
+  else {
+    queryError.innerHTML = "";
+    return true;
+  }
+}
+function ValidateContactForm() {
+  if (
+    !ValidateContactName() ||
+    !ValidateContactEmail() ||
+    !ValidateContactQuery()
+  ) {
+    errorMessage.innerHTML = "Please fix the error";
+    errorMessage.style.color = "red";
+    setTimeout(() => {
+      errorMessage.innerHTML = "";
+    }, 3000);
+    return false;
+  }
+}
