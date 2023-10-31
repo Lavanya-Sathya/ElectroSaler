@@ -56,7 +56,6 @@ function ValidateContactName() {
   const name = nameContact.value;
   if (name === "") {
     nameError.innerHTML = "Name is Required";
-    console.log("name is required");
     nameError.style.color = "red";
     return false;
   } else {
@@ -82,18 +81,11 @@ function ValidateContactEmail() {
 }
 function ValidateContactQuery() {
   var query = queryContact.value;
-
   if (query.length == 0) {
     queryError.innerHTML = "Please mention your query";
     queryError.style.color = "red";
     return false;
-  }
-  // else if (query.length <= 30) {
-  //   queryError.innerHTML = "query length";
-  //   queryError.style.color = "red";
-  //   return false;
-  // }
-  else {
+  } else {
     queryError.innerHTML = "";
     return true;
   }
