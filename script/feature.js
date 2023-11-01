@@ -98,9 +98,10 @@ function ValidateContactForm() {
   ) {
     errorMessage.innerHTML = "Please fix the error";
     errorMessage.style.color = "red";
-    setTimeout(() => {
-      errorMessage.innerHTML = "";
-    }, 3000);
     return false;
+  } else {
+    errorMessage.innerHTML = "";
+    alert("Your Query is registered.");
+    return true;
   }
 }

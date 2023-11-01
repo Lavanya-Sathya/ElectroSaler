@@ -49,8 +49,25 @@ function validateLogin() {
     errorMsg.style.color = "red";
     return false;
   } else {
+    const userData = JSON.parse(localStorage.getItem("userData")) || [];
     errorMsg.innerHTML = "";
-    return true;
+    if (userData.length === 0) {
+      email.value = "";
+      pass.value = "";
+      alert("Please Sign Up");
+      return false;
+    } else if (
+      email.value === userData[0].email &&
+      pass.value === userData[0].pass
+    ) {
+      alert("LoggedIn Successfully");
+      return true;
+    } else {
+      errorMsg.innerHTML = "Password and Email doesn't match. Please Check";
+      setTimeout(() => (errorMsg.innerHTML = ""), 3000);
+      errorMsg.style.color = "red";
+      return false;
+    }
   }
 }
 
@@ -163,6 +180,17 @@ function validateSignUp() {
     return false;
   } else {
     errorSubmitSignup.innerHTML = "";
+    const user = [
+      {
+        name: nameSignup.value,
+        email: emailSignup.value,
+        phno: mobileSignup.value,
+        pass: passwordSignup.value,
+      },
+    ];
+    localStorage.setItem("userData", JSON.stringify(user));
+    alert("Sign Up successful. Please Login");
+
     return true;
   }
 }
