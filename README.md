@@ -5,13 +5,31 @@
 
 ## Features
 
-- **Navigation Bar**: A responsive navigation bar for easy access to different sections.
-- **Carousel Images**: Eye-catching carousel images showcasing featured products.
-- **About Us**: Learn about our company's mission and values.
-- **Product Showcase**: Browse our latest products with detailed descriptions.
-- **Customer Reviews**: Check out testimonials from happy customers.
-- **Contact Us**: Get in touch with us with questions, comments, or support.
-- **Footer**: Find essential links and contact information in the footer.
+### Signup and Login
+- Users can sign up for an account.
+- User details are stored in `localStorage`.
+- Users can log in with their registered credentials.
+- Proper JavaScript validation is implemented for the signup and login forms.
+  
+### Navigation Bar
+- A responsive navigation bar for easy access to different sections.
+### Carousel Images
+- Eye-catching carousel images showcasing featured products.
+### About Us
+- Learn about our company's mission and values.
+
+### Product Section
+- Users can browse a selection of products.
+- Products can be added to a shopping cart.
+- Shopping cart items are stored in `localStorage` to persist across page refreshes.
+- Users can remove items from the cart.
+### Customer Reviews
+- Check out testimonials from happy customers.
+### Contact Us
+- Get in touch with us with questions, comments, or support.
+### Footer
+- Find essential links and contact information in the footer.
+
 
 ## Usage
 
