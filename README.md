@@ -58,7 +58,7 @@ You can customize the ElectroSale website to fit your specific needs:
   
 ## Credits
 
-- Built with HTML, CSS, and Bootstrap.
+- Built with JS,HTML, CSS, and Bootstrap.
 - Icon by [FontAwesome](https://fontawesome.com/).
 - Background image from [Unsplash](https://unsplash.com/).
 - Product images from [amazon](https://www.amazon.in/).
