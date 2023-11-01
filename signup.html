@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign UP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="./styles/login.css">
+</head>
+
+<body>
+    <!-- Header section  -->
+    <header id="header-container"></header>
+    <div class="divider"></div>
+    <div class="container m-auto mt-3 pt-4 formControl">
+        <form onsubmit="return validateSignUp()" action="login.html">
+            <h4 class="text-center" style="color:rgba(33, 4, 34, 0.8)">SIGN UP</h4>
+            <div class="mt-5">
+                <label for="nameSignup" class="form-label">Name</label>
+                <input type="text" class="form-control" placeholder="Enter your Name" id="nameSignup"
+                    onkeyup="validateSignupName()">
+                <span id="errorNameSignup"></span>
+            </div>
+            <div class="mt-2">
+                <label for="emailSignup" class="form-label">Email</label>
+                <input type="email" class="form-control" placeholder="Enter your email" id="emailSignup"
+                    onkeyup="validateSignupEmail()">
+                <span id="errorEmailSignup"></span>
+            </div>
+            <div class="mt-2">
+                <label for="mobileSignup" class="form-label">Contact Number</label>
+                <input type="text" class="form-control" placeholder="Enter your Phone no." id="mobileSignup"
+                    onkeyup="validateSignupMobile()">
+                <span id="errorMobileSignup"></span>
+
+            </div>
+            <div class="mt-2">
+                <label for="passwordSignup" class="form-label">Password</label>
+                <input type="text" class="form-control" placeholder="Enter your Password" id="passwordSignup"
+                    onkeyup="validateSignupPassword()">
+                <span id="errorPassSignup"></span>
+
+            </div>
+            <div class="mt-2">
+                <label for="RepasswordSignup" class="form-label">Confirm Password</label>
+                <input type="text" class="form-control" placeholder="Confirm your Password" id="RepasswordSignup"
+                    onkeyup="validateSignupRePassword()">
+                <span id="errorRePassSignup"></span>
+
+            </div>
+            <div class="btnForm">
+                <button type="submit" class="mt-4 btnLogin">Signup</button>
+                <span id="errorSubmitSignup"></span>
+
+            </div>
+            <p class="text-center mt-1">Have an account, Please <a href="login.html" style="text-decoration: none;">Log
+                    In</a> here</p>
+        </form>
+    </div>
+
+    <!-- footer section -->
+    <div id="footer-container"></div>
+    <script src="script/formValidation.js"></script>
+    <script src="script/main.js"></script>
+
+</body>
+
+</html>
