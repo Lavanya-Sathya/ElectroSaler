@@ -47,6 +47,7 @@ You can customize the ElectroSale website to fit your specific needs:
 
 ## Technologies Used
 
+- Java Script
 - HTML
 - CSS
 - Bootstrap
