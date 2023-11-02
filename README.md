@@ -36,12 +36,13 @@
 1. Clone the repository to your local machine.
 2. Open the `index.html` file in your web browser.
 3. Explore the website and experience the seamless shopping interface.
+4. For Online Experience <a href="https://electrosaler.netlify.app/">Click here </a>
 
 ## Customization
 
 You can customize the ElectroSale website to fit your specific needs:
 
-- Modify product information in the HTML.
+- Modify product information.
 - Customize the color scheme and styling in the CSS.
 - Add or remove sections as required.
 
