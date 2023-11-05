@@ -200,3 +200,41 @@ a {
   align-items: center;
   gap: 8px;
 }
+/* Cart Styling */
+#cart-container {
+  display: grid;
+  grid-template-columns: repeat(1, 320px);
+  justify-content: center;
+  gap: 15px;
+}
+.cartHeader {
+  border: 2px solid #212529;
+  border-radius: 5px;
+  display: flex;
+}
+.cartHeader > img {
+  height: 10rem;
+}
+.cartDiv {
+  padding-left: 0.5rem;
+}
+.price {
+  background-color: rgba(33, 4, 34);
+  color: white;
+  padding: 0.1rem;
+  border-radius: 4px;
+}
+.ItemNo,
+#priceTotal {
+  font-size: 1.3rem;
+}
+#label {
+  margin: 2rem 0;
+}
+#back {
+  background-color: rgba(33, 4, 34);
+  color: white;
+  padding: 0.5rem 0.2rem;
+  margin-top: 1.4rem;
+  border-radius: 4px;
+}
