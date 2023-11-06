@@ -36,6 +36,7 @@ const generateCartItems = () => {
                 </div>`;
       })
       .join("");
+    attachEventListeners();
   } else {
     cartContainer.innerHTML = ``;
     label.innerHTML = `<div style="height:19rem"><h4>Your cart is empty</h4>
@@ -44,15 +45,24 @@ const generateCartItems = () => {
 };
 generateCartItems();
 
-let decrement = document.querySelectorAll("#decrement");
-let increment = document.querySelectorAll("#increment");
+function attachEventListeners() {
+  let decrement = document.querySelectorAll("#decrement");
+  let increment = document.querySelectorAll("#increment");
 
-decrement.forEach((x) => {
-  x.addEventListener("click", (e) => {
-    const id = e.target.getAttribute("dataid");
-    decrementItem(id);
+  decrement.forEach((x) => {
+    x.addEventListener("click", (e) => {
+      const id = e.target.getAttribute("dataid");
+      decrementItem(id);
+    });
   });
-});
+
+  increment.forEach((x) => {
+    x.addEventListener("click", (e) => {
+      const id = e.target.getAttribute("dataid");
+      incrementItem(id);
+    });
+  });
+}
 let decrementItem = (id) => {
   const search = cart.find((data) => data.id === id);
   console.log("search:", search);
@@ -61,23 +71,17 @@ let decrementItem = (id) => {
   else {
     search.item -= 1;
   }
+  cart = cart.filter((x) => x.item !== 0);
   generateCartItems();
   localStorage.setItem("data", JSON.stringify(cart));
   updateCart(id);
 };
-
-increment.forEach((x) => {
-  x.addEventListener("click", (e) => {
-    const id = e.target.getAttribute("dataid");
-    incrementItem(id);
-  });
-});
 let incrementItem = (id) => {
   const search = cart.find((data) => data.id === id);
   search.item += 1;
+  updateCart(id);
   generateCartItems();
   localStorage.setItem("data", JSON.stringify(cart));
-  updateCart(id);
 };
 
 let updateCart = (id) => {
