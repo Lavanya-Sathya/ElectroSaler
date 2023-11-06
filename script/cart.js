@@ -2,7 +2,7 @@ const cartContainer = document.getElementById("cart-container");
 const items = document.getElementById("items");
 const label = document.getElementById("label");
 
-const cart = JSON.parse(localStorage.getItem("data")) || [];
+let cart = JSON.parse(localStorage.getItem("data")) || [];
 items.innerHTML = cart.length;
 console.log(cart);
 
@@ -19,7 +19,7 @@ const generateCartItems = () => {
                     <div class="cartDiv"> 
                         <div class="name_remove">
                             <h5>${name}</h5>
-                            <i class="bi bi-x-lg"></i>
+                            <i class="bi bi-x-lg"  id="remove" dataid=${id}></i>
                         </div>
                         <span class="price">Rs ${price}</span>
                         <div class="ItemNo">
@@ -48,6 +48,7 @@ generateCartItems();
 function attachEventListeners() {
   let decrement = document.querySelectorAll("#decrement");
   let increment = document.querySelectorAll("#increment");
+  let remove = document.querySelectorAll("#remove");
 
   decrement.forEach((x) => {
     x.addEventListener("click", (e) => {
@@ -62,29 +63,58 @@ function attachEventListeners() {
       incrementItem(id);
     });
   });
+
+  remove.forEach((x) => {
+    x.addEventListener("click", (e) => {
+      const id = e.target.getAttribute("dataid");
+      removeItem(id);
+    });
+  });
 }
 let decrementItem = (id) => {
-  const search = cart.find((data) => data.id === id);
-  console.log("search:", search);
+  let search = cart.find((data) => data.id === id);
   if (search === undefined) return;
   else if (search.item === 0) return;
   else {
     search.item -= 1;
   }
+  updateCart(id);
   cart = cart.filter((x) => x.item !== 0);
   generateCartItems();
+  items.innerHTML = cart.length;
   localStorage.setItem("data", JSON.stringify(cart));
-  updateCart(id);
 };
 let incrementItem = (id) => {
-  const search = cart.find((data) => data.id === id);
+  let search = cart.find((data) => data.id === id);
   search.item += 1;
   updateCart(id);
   generateCartItems();
+  items.innerHTML = cart.length;
   localStorage.setItem("data", JSON.stringify(cart));
 };
 
-let updateCart = (id) => {
-  const search = cart.find((x) => x.id === id);
-  document.getElementById(id).innerHTML = search.item;
+let removeItem = (id) => {
+  cart = cart.filter((data) => data.id !== id);
+  items.innerHTML = cart.length;
+  TotalAmount();
+  generateCartItems();
+  localStorage.setItem("data", JSON.stringify(cart));
 };
+let updateCart = (id) => {
+  let search = cart.find((x) => x.id === id);
+  document.getElementById(id).innerHTML = search.item;
+  TotalAmount();
+};
+let TotalAmount = () => {
+  const Amount = cart
+    .map((x) => {
+      const search = smartMobilePhones.find((data) => data.id === x.id) || [];
+      return x.item * search.price;
+    })
+    .reduce((x, y) => x + y, 0);
+  label.innerHTML = `<div><h4>Total Bill:  ${Amount}</h4>
+    <a href="#" id="back" style="background-color:#080">Checkout</a> 
+    <a href="product.html" id="back" style="background-color:#c00">Clear cart</a>
+    </div>`;
+};
+TotalAmount();
