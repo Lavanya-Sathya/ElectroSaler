@@ -13,24 +13,22 @@ const generateCartItems = () => {
         const cartMobiles = smartMobilePhones.find(
           (x) => x.id === cartItems.id
         );
-        const { id, name, price, img, descp } = cartMobiles;
+        const { id, name, price, img } = cartMobiles;
         return `<div class="cartHeader">
                     <img src=${img} alt=${name} />
                     <div class="cartDiv"> 
                         <div class="name_remove">
                             <h5>${name}</h5>
+                            <i class="bi bi-x-lg"></i>
                         </div>
                         <span class="price">Rs ${price}</span>
-                        
                         <div class="ItemNo">
-                            <i class="fa-solid fa-minus" style="color: #a12a0c;"></i>
+                            <i  onclick= "decrement(${cartItems.id})" class="fa-solid fa-minus" style="color: #a12a0c;" ></i>
                             <span id="ItemTotal">${cartItems.item}</span>
-                            <i class="fa-solid fa-plus" style="color: #09711b;"></i>
+                            <i class="fa-solid fa-plus" style="color: #09711b;" onclick="increment(${cartItems.id})"></i>
                         </div>
                         <div id="priceTotal">
-                            <i class="fa-solid fa-indian-rupee-sign"> </i>${
-                              cartItems.item * price
-                            }
+                            <i class="fa-solid fa-indian-rupee-sign"> </i>${cartItems.item * price}
                         </div>
                     </div>
                 </div>`;

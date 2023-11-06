@@ -208,6 +208,7 @@ a {
   gap: 15px;
 }
 .cartHeader {
+  position: relative;
   border: 2px solid #212529;
   border-radius: 5px;
   display: flex;
@@ -216,7 +217,7 @@ a {
   height: 10rem;
 }
 .cartDiv {
-  padding-left: 0.5rem;
+  padding: 0 0 0.5rem 0.5rem;
 }
 .price {
   background-color: rgba(33, 4, 34);
@@ -226,7 +227,7 @@ a {
 }
 .ItemNo,
 #priceTotal {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 #label {
   margin: 2rem 0;
@@ -237,4 +238,18 @@ a {
   padding: 0.5rem 0.2rem;
   margin-top: 1.4rem;
   border-radius: 4px;
+}
+.fa-solid,.bi {
+  cursor: pointer;
+}
+.name_remove{
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+}
+.bi-x-lg{
+  font-size: 1rem;
+  color:  #fa0a0a;;
 }
