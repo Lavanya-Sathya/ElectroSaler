@@ -71,6 +71,7 @@ function attachEventListeners() {
     });
   });
 }
+// Decrement the number of items added to the cart
 let decrementItem = (id) => {
   let search = cart.find((data) => data.id === id);
   if (search === undefined) return;
@@ -84,6 +85,9 @@ let decrementItem = (id) => {
   items.innerHTML = cart.length;
   localStorage.setItem("data", JSON.stringify(cart));
 };
+
+// Add more  items added to the cart
+
 let incrementItem = (id) => {
   let search = cart.find((data) => data.id === id);
   search.item += 1;
@@ -93,6 +97,8 @@ let incrementItem = (id) => {
   localStorage.setItem("data", JSON.stringify(cart));
 };
 
+// Remove item from the cart
+
 let removeItem = (id) => {
   cart = cart.filter((data) => data.id !== id);
   items.innerHTML = cart.length;
@@ -100,11 +106,17 @@ let removeItem = (id) => {
   generateCartItems();
   localStorage.setItem("data", JSON.stringify(cart));
 };
+
+// update Cart items
+
 let updateCart = (id) => {
   let search = cart.find((x) => x.id === id);
   document.getElementById(id).innerHTML = search.item;
   TotalAmount();
 };
+
+// calculate total items
+
 let TotalAmount = () => {
   const Amount = cart
     .map((x) => {
@@ -114,7 +126,16 @@ let TotalAmount = () => {
     .reduce((x, y) => x + y, 0);
   label.innerHTML = `<div><h4>Total Bill:  ${Amount}</h4>
     <a href="#" id="back" style="background-color:#080">Checkout</a> 
-    <a href="product.html" id="back" style="background-color:#c00">Clear cart</a>
+    <a href="#" id="back" onclick="clearCart()" style="background-color:#c00">Clear cart</a>
     </div>`;
 };
 TotalAmount();
+
+// Clear all items
+
+let clearCart = () => {
+  cart = [];
+  items.innerHTML = cart.length;
+  generateCartItems();
+  localStorage.setItem("data", JSON.stringify(cart));
+};
