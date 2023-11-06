@@ -17,7 +17,7 @@ const generateMobile = () => {
                     <h4><i class="fa-solid fa-indian-rupee-sign"></i>${price}</h4>
                     <button class="cartButton" id = ${
                       search === undefined ? "cartButton" : "cartButtonRemove"
-                    }  data-id=${id} onclick="addToBasket(${id})" type="button">
+                    }  data-id=${id}  type="button">
                    ${
                      search === undefined ? "Add to cart" : "Added to cart"
                    }   </button>
