@@ -23,6 +23,14 @@
 - Products can be added to a shopping cart.
 - Shopping cart items are stored in `localStorage` to persist across page refreshes.
 - Users can remove items from the cart.
+
+  ### Cart Section
+- User can navigate to cart section from the Product section.
+- Products added to a shopping cart will be shown here.
+- Users can specify the number of particular items required by clicking on the + and - buttons.
+- User can remove the Item from the cart.
+- User can clear the cart item on one click.
+  
 ### Customer Reviews
 - Check out testimonials from happy customers.
 ### Contact Us
