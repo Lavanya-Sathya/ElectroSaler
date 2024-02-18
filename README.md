@@ -1,4 +1,5 @@
 # ElectroSaler - Online Electronics Store
+
 ![ElectroSale Preview](images/screenshot.PNG)
 
 **ElectroSale** is an online electronics store website built with HTML, CSS, and Bootstrap. It offers a seamless shopping experience with a user-friendly interface and various sections for easy navigation.
